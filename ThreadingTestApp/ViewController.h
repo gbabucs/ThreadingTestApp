@@ -2,12 +2,26 @@
 //  ViewController.h
 //  ThreadingTestApp
 //
-//  Created by Gabriel Theodoropoulos on 9/4/12.
-//  Copyright (c) 2012 -. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    NSOperationQueue *operationQueue;
+}
+
+@property (retain, nonatomic) IBOutlet UILabel *label1;
+@property (retain, nonatomic) IBOutlet UILabel *label2;
+@property (retain, nonatomic) IBOutlet UILabel *label3;
+@property (retain, nonatomic) IBOutlet UILabel *label4;
+
+
+- (IBAction)applyBackgroundColor1;
+- (IBAction)applyBackgroundColor2;
+- (IBAction)applyBackgroundColor3;
+
+-(void)counterTask;
+-(void)colorRotatorTask;
+-(void)decreaseCounterTask;
 
 @end
